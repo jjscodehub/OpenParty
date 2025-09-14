@@ -73,7 +73,8 @@ class RouteHandler {
   wrapHandler(handler) {
     return async (req, res, next) => {
       try {
-        await handler(req, res, next);
+        // Use .call() to maintain the 'this' context of the route handler class
+        await handler.call(this, req, res, next);
       } catch (error) {
         // Use the centralized error handler
         ErrorHandler.logError(this.name, error, {
