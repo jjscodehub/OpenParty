@@ -11,8 +11,8 @@ def compare_json(a_file, b_file, output_file):
     with open(output_file, 'w') as output:
         json.dump(missing_keys, output, indent=4)
 
-a_file = 'jd2017-nx/sku-packages.json'
-b_file = 'jd2017-pc/sku-packages.json'
+sku1 = input("Enter platform name for main sku")
+sku2 = input("Enter platform name for secondary sku")
 output_file = 'missing_keys.json'
 
-compare_json(a_file, b_file, output_file)
+compare_json(sku1 + '/sku-packages.json', sku2 + '/sku-packages.json, output_file)
