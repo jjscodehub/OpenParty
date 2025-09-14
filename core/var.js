@@ -26,11 +26,11 @@ const replaceDomainPlaceholder = (obj, domain) => {
 
 const main = {
   skupackages: {
-    pc: loadJsonFile('Platforms/jd2017-pc/sku-packages.json', '../database/Platforms/jd2017-pc/sku-packages.json'),
-    nx: loadJsonFile('Platforms/jd2017-nx/sku-packages.json', '../database/Platforms/jd2017-nx/sku-packages.json'),
-    wiiu: loadJsonFile('Platforms/jd2017-wiiu/sku-packages.json', '../database/Platforms/jd2017-wiiu/sku-packages.json'),
-    durango: loadJsonFile('Platforms/jd2017-durango/sku-packages.json', '../database/Platforms/jd2017-durango/sku-packages.json'),
-    orbis: loadJsonFile('Platforms/jd2017-orbis/sku-packages.json', '../database/Platforms/jd2017-orbis/sku-packages.json'),
+    pc: loadJsonFile('Platforms/pc/sku-packages.json', '../database/Platforms/pc/sku-packages.json'),
+    nx: loadJsonFile('Platforms/nx/sku-packages.json', '../database/Platforms/nx/sku-packages.json'),
+    wiiu: loadJsonFile('Platforms/wiiu/sku-packages.json', '../database/Platforms/wiiu/sku-packages.json'),
+    durango: loadJsonFile('Platforms/durango/sku-packages.json', '../database/Platforms/durango/sku-packages.json'),
+    orbis: loadJsonFile('Platforms/orbis/sku-packages.json', '../database/Platforms/orbis/sku-packages.json'),
   },
   entities: replaceDomainPlaceholder(require('../database/config/v2/entities.json'), settings.server.domain),
   configuration: replaceDomainPlaceholder(require('../database/config/v1/configuration.json'), settings.server.domain),
