@@ -1,5 +1,5 @@
 var sdb = require('./openparty-all/songdbs.json');
-var ahud = require('./jd2017-nx/sku-packages.json');
+var ahud = require('./nx/sku-packages.json');
 var bhud = Object.keys(ahud);
 
 var missingElements = [];
