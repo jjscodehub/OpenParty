@@ -118,14 +118,14 @@ class AccountRepository {
 
         return new Promise((resolve, reject) => {
             db.run(`INSERT OR REPLACE INTO user_profiles (
-                profileId, userId, username, nickname, name, email, password,
+                profileId, userId, username, nickname, name, email, password, ticket,
                 alias, aliasGender, avatar, country, platformId, jdPoints, portraitBorder, rank,
                 scores, songsPlayed, favorites, progression, history,
                 skin, diamondPoints, unlockedAvatars, unlockedSkins, unlockedAliases, unlockedPortraitBorders,
                 wdfRank, stars, unlocks, populations, inProgressAliases, language, firstPartyEnv,
                 syncVersions, otherPids, stats, mapHistory,
                 createdAt, updatedAt
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
             [
                 accountData.profileId,
                 accountData.userId,
@@ -134,6 +134,7 @@ class AccountRepository {
                 accountData.name,
                 accountData.email,
                 accountData.password, // Ensure this is handled securely (e.g., hashed) if stored
+                accountData.ticket,
                 accountData.alias,
                 accountData.aliasGender,
                 accountData.avatar,
@@ -204,6 +205,7 @@ class AccountRepository {
                             name: row.name,
                             email: row.email,
                             password: row.password,
+                            ticket: row.ticket,
                             alias: row.alias,
                             aliasGender: row.aliasGender,
                             avatar: row.avatar,
@@ -273,6 +275,7 @@ class AccountRepository {
                             name: row.name,
                             email: row.email,
                             password: row.password,
+                            ticket: row.ticket,
                             alias: row.alias,
                             aliasGender: row.aliasGender,
                             avatar: row.avatar,
@@ -342,6 +345,7 @@ class AccountRepository {
                             name: row.name,
                             email: row.email,
                             password: row.password,
+                            ticket: row.ticket,
                             alias: row.alias,
                             aliasGender: row.aliasGender,
                             avatar: row.avatar,
