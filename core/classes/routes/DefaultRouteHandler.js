@@ -159,6 +159,9 @@ const path = require('path');
      * @param {Request} req - The request object
      * @param {Response} res - The response object
      */
+
+    /** i need to fix this */
+    
     handleSession(req, res) {
         res.send({
             "pairingCode": "000000",
@@ -223,7 +226,7 @@ const path = require('path');
      */
     handleQuests(req, res) {
         const sku = req.header('X-SkuId');
-        if (sku && sku.startsWith('jd2017-nx-all')) {
+        if (sku && sku == 'jd2017-nx-all') {
             res.send(core.main.questsnx);
         } else {
             res.send(core.main.questspc);
