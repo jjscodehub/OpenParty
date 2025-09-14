@@ -53,7 +53,7 @@ The OpenParty directory structure is organized to optimize access and facilitate
 
   * **Purpose**: This file contains configurations for every map's video content.
 
-* ### `database/Platforms/jd2017-{Platform}/sku-packages.json`
+* ### `database/Platforms/{Platform}/sku-packages.json`
 
   * **Purpose**: This file contains every maps' files.
 

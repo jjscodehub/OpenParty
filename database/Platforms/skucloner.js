@@ -23,4 +23,4 @@ function mergeJSON(obj1, obj2) {
     return merged;
   }
 
-  fs.writeFileSync(path.join(__dirname, 'jd2017-pc/sku-packages.json'), JSON.stringify(mergeJSON(JSON.parse(fs.readFileSync(path.join(__dirname, 'jd2017-pc/sku-packages-a.json'))), JSON.parse(fs.readFileSync(path.join(__dirname, 'jd2017-pc/skuc.json')))), null, 2))
+  fs.writeFileSync(path.join(__dirname, 'pc/sku-packages.json'), JSON.stringify(mergeJSON(JSON.parse(fs.readFileSync(path.join(__dirname, 'pc/sku-packages-a.json'))), JSON.parse(fs.readFileSync(path.join(__dirname, 'jd2017-pc/skuc.json')))), null, 2))
